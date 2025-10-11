@@ -153,9 +153,14 @@ body {
   max-width: 1200px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 30px;
   align-items: center;
+}
+
+/* Reverse layout: images on left (1fr), text on right (1.5fr) */
+.checkpoint-content.reverse {
+  grid-template-columns: 1fr 1.5fr;
 }
 
 /* Text content area */
