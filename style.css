@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a2e);
+  color: #e0e0e0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 40px;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.tour-overview {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tour-overview h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+  font-weight: 400;
+}
+
+.tour-overview p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+}
+
+.hero-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.hero-images .image-placeholder {
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-images .image-placeholder:hover {
+  transform: scale(1.05);
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-indicator {
+  margin-top: 40px;
+  animation: pulse 2s infinite;
+}
+
+.scroll-indicator p {
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  color: #ffd700;
+  animation: bounce 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Checkpoint Sections */
+.checkpoint {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.checkpoint:nth-child(even) {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+}
+
+.checkpoint:nth-child(odd) {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+}
+
+.checkpoint-content {
+  max-width: 900px;
+  width: 100%;
+}
+
+.checkpoint-header {
+  margin-bottom: 40px;
+  border-left: 5px solid #ffd700;
+  padding-left: 20px;
+}
+
+.checkpoint-number {
+  display: block;
+  font-size: 0.9rem;
+  color: #ffd700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-family: "Arial", sans-serif;
+}
+
+.checkpoint-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #f4f4f4;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.checkpoint-section {
+  margin-bottom: 35px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-left: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.checkpoint-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+  font-weight: 400;
+}
+
+.checkpoint-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+}
+
+.checkpoint-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checkpoint-section li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.checkpoint-section li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+}
+
+.checkpoint-images {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.checkpoint-images .image-placeholder {
+  flex: 1;
+  min-width: 250px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.checkpoint-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-text {
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tour Details Section */
+.tour-details {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+}
+
+.details-content {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.details-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ffd700;
+  font-weight: 400;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.detail-item {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.detail-item h3 {
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.detail-item p {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+.tour-note {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.tour-credit {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-images .image-placeholder {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .checkpoint-images {
+    flex-direction: column;
+  }
+
+  .checkpoint-images .image-placeholder {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
