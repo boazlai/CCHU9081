@@ -14,6 +14,29 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Hyperlink Styles */
+a {
+  color: #8b4513;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #a0522d;
+  border-bottom: 2px solid #8b4513;
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+a:visited {
+  color: #654321;
+}
+
+a:active {
+  color: #5d3a1a;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
