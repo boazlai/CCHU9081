@@ -37,13 +37,72 @@ a:active {
   color: #5d3a1a;
 }
 
+/* Navigation Sidebar */
+.sidebar-nav {
+  position: fixed;
+  left: 20px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 200px;
+  background: transparent;
+  padding: 15px 0;
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.nav-header {
+  padding: 0 10px 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8b4513;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  margin: 0 0 10px;
+  background: transparent;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 3px 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 10px;
+  color: #5a5a5a;
+  text-decoration: none;
+  border-bottom: none;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  background: transparent;
+}
+
+.nav-link:hover {
+  color: #8b4513;
+  border-left-color: #8b4513;
+  padding-left: 15px;
+}
+
+.nav-link.active {
+  background: transparent;
+  border-left-color: #8b4513;
+  color: #8b4513;
+  font-weight: bold;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 20px 40px 220px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
   position: relative;
 }
@@ -159,7 +218,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 20px 40px 220px;
   scroll-snap-align: start;
   position: relative;
 }
@@ -320,7 +379,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px 20px 60px 220px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
@@ -508,6 +567,18 @@ a:active {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hide sidebar on mobile */
+  .sidebar-nav {
+    display: none;
+  }
+
+  /* Remove left padding on mobile */
+  .hero-section,
+  .checkpoint,
+  .tour-details {
+    padding-left: 20px;
+  }
+
   .hero-images {
     flex-direction: column;
     align-items: center;
