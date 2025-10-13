@@ -589,7 +589,8 @@ a:active {
     max-width: 400px;
   }
 
-  .checkpoint-content {
+  .checkpoint-content,
+  .checkpoint-content.reverse {
     grid-template-columns: 1fr;
   }
 
